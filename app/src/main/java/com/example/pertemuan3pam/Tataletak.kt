@@ -1,5 +1,6 @@
 package com.example.pertemuan3pam
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -15,8 +16,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import kotlin.coroutines.coroutineContext
 import kotlin.random.Random
 
@@ -133,7 +138,16 @@ fun TataletakBoxColumnRow(modifier: Modifier) {
                 .background(color = Color.DarkGray),
             contentAlignment = Alignment.Center
         ){
-
+            Image(painter = gambar,
+                contentDescription = null,
+                contentScale = ContentScale.Fit)
+            Text(text = "My Hobby",
+                fontSize = 50.sp,
+                color = Color.Red,
+                fontWeight = FontWeight.Bold,
+                fontFamily = FontFamily.Cursive,
+                modifier = Modifier.align(
+                    alignment = Alignment.Center))
         }
     }
 }
